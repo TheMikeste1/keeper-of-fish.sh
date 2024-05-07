@@ -9,6 +9,8 @@ set fish_complete_path $fish_complete_path "$script_directory/completions/user"
 if status is-interactive
     # Commands to run in interactive sessions can go here
     function fish_user_key_bindings
+        fish_vi_key_bindings # Call this first so Starship can detect vim mode
+
         # Execute this once per mode that emacs bindings should be used in
         fish_default_key_bindings -M insert
 
@@ -18,6 +20,7 @@ if status is-interactive
         # The argument specifies the initial mode (insert, "default" or visual).
         fish_vi_key_bindings --no-erase insert
     end
+    set -g fish_key_bindings fish_user_key_bindings
 
     fzf_configure_bindings --variables=\e\cv
 end

@@ -5,6 +5,7 @@ end
 set script_directory $(dirname (readlink -m (status --current-filename)))
 set fish_function_path $fish_function_path "$script_directory/functions/user"
 set fish_complete_path $fish_complete_path "$script_directory/completions/user"
+setterm -linewrap off
 
 if status is-interactive
     # Commands to run in interactive sessions can go here

@@ -39,6 +39,7 @@ abbr --add --position command G git
 ssh-activate
 
 starship init fish | source
+enable_transience
 
 if [ -f ~/.bash_aliases ]
     . ~/.bash_aliases

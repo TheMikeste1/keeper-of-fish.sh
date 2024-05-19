@@ -45,4 +45,5 @@ if [ -f ~/.bash_aliases ]
     . ~/.bash_aliases
 end
 
+eval $(fzf --fish)
 source "$script_directory/local.config.fish" 2>/dev/null
